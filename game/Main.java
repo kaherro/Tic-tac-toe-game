@@ -19,6 +19,9 @@ public class Main {
     public static void main(String[] args) {
         int n, m, k;
         int maxi = 0; 
+        int rhombus = 1;
+        boolean tournament = true;
+        int players_num = 11; // must be >= 3
         Scanner in = new Scanner(System.in);
         while(true) {
             try {
@@ -33,7 +36,6 @@ public class Main {
             }
         }
 
-        int rhombus = 1;
         if(rhombus == 1) {
             n = n * 2 - 1; 
             m = n; 
@@ -45,10 +47,8 @@ public class Main {
             maxi = m * n; 
         }
 
-        boolean tournament = true;
         if(tournament) {
             ArrayList<ArrayList<Integer>> results = new ArrayList<>();
-            int players_num = 11; // must be >= 3
             ArrayList<Integer> high = new ArrayList<>();
             ArrayList<Integer> low = new ArrayList<>();
             
